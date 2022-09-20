@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    tools {
+		maven "maven123"
+		}
+	stages {
+	    stage("example") {
+			steps{
+				sh 'mvn --version'
+			}
+		}
+	}
+}
